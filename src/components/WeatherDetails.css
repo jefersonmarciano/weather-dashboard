@@ -1,0 +1,13 @@
+.weather-details {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .weather-details p {
+    margin: 5px 0;
+    color: #555;
+  }

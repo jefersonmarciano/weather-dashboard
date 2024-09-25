@@ -1,0 +1,14 @@
+{
+    "search": "Search",
+    "humidity": "Humidity",
+    "windSpeed": "Wind Speed",
+    "description": "Description",
+    "favorite": "Favorite",
+    "favorites": "Favorites",
+    "temperature": "Temperature",
+    "min": "Min",
+    "max": "Max",
+    "language": "Language",
+    "currentLocation": "Current Location",
+    "5DayForecast": "5-Day Forecast"
+  }

@@ -1,0 +1,14 @@
+{
+    "search": "Buscar",
+    "humidity": "Humedad",
+    "windSpeed": "Velocidad del Viento",
+    "description": "Descripción",
+    "favorite": "Favorito",
+    "favorites": "Favoritos",
+    "temperature": "Temperatura",
+    "min": "Mín",
+    "max": "Máx",
+    "language": "Idioma",
+    "currentLocation": "Ubicación Actual",
+    "5DayForecast": "Pronóstico de 5 Días"
+  }
