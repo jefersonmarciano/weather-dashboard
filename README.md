@@ -33,7 +33,7 @@ O **Weather Dashboard** é uma aplicação web desenvolvida em React que permite
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/weather-dashboard.git
+   git clone https://github.com/jefersonmarciano/weather-dashboard
    ```
 
 2. **Navegue até o diretório do projeto:**
@@ -130,7 +130,7 @@ The **Weather Dashboard** is a React-based web application that allows users to 
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/your-username/weather-dashboard.git](https://github.com/jefersonmarciano/weather-dashboard)
+   git clone https://github.com/jefersonmarciano/weather-dashboard
    ```
 
 2. **Navigate to the project directory:**
