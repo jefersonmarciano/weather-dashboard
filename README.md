@@ -91,9 +91,7 @@ O **Weather Dashboard** é uma aplicação web desenvolvida em React que permite
 4. **Push para a branch (`git push origin feature/AmazingFeature`)**
 5. **Abra um Pull Request**
 
-### 📜 Licença
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
 
@@ -188,6 +186,4 @@ The **Weather Dashboard** is a React-based web application that allows users to 
 4. **Push to the branch (`git push origin feature/AmazingFeature`)**
 5. **Open a Pull Request**
 
-### 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
