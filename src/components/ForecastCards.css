@@ -1,0 +1,23 @@
+.forecast-card {
+  text-align: center;
+  padding: 10px;
+}
+
+.weather-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+  }

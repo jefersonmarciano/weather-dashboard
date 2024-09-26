@@ -7,6 +7,7 @@ import WeatherCard from './components/WeatherCard';
 import WeatherDetails from './components/WeatherDetails';
 import ForecastChart from './components/ForecastChart';
 import Favorites from './components/Favorites';
+import ForecastCards from './components/ForecastCards';
 import LanguageSelector from './components/LanguageSelector';
 import { FavoritesProvider } from './contexts/FavoritesContext';
 import { useTranslation } from 'react-i18next';
@@ -155,6 +156,9 @@ function App() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <ForecastChart data={forecastData} />
+                </Grid>
+                <Grid item xs={12}>
+                  <ForecastCards data={forecastData} />
                 </Grid>
               </Grid>
             )}
