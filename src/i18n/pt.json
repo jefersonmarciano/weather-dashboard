@@ -6,9 +6,9 @@
     "favorite": "Favoritar",
     "favorites": "Favoritos",
     "temperature": "Temperatura",
-    "min": "Mínima",
-    "max": "Máxima",
+    "min": "Min",
+    "max": "Max",
     "language": "Idioma",
     "currentLocation": "Localização Atual",
     "5DayForecast": "Previsão para 5 Dias"
-  }
+}

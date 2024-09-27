@@ -2,6 +2,11 @@
   text-align: center;
   padding: 10px;
 }
+.card-container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .weather-icon {
   animation: float 3s ease-in-out infinite;

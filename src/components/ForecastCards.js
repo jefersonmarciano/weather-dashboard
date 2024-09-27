@@ -44,27 +44,35 @@ function ForecastCards({ data }) {
   // Obter médias diárias
   const dailyForecast = Object.entries(groupedForecast).map(([date, items]) => {
     const avgTemp = items.reduce((sum, item) => sum + item.main.temp, 0) / items.length;
+    const minTemp = Math.min(...items.map(item => item.main.temp_min));
+    const maxTemp = Math.max(...items.map(item => item.main.temp_max));
     const mostFrequentWeather = items.reduce((acc, item) => {
       acc[item.weather[0].main] = (acc[item.weather[0].main] || 0) + 1;
       return acc;
     }, {});
     const mainWeather = Object.entries(mostFrequentWeather).sort((a, b) => b[1] - a[1])[0][0];
-    return { date, avgTemp, mainWeather };
+    return { date, avgTemp, minTemp, maxTemp, mainWeather };
   }).slice(1, 6); // Obter próximos 5 dias
 
   return (
-    <Card sx={{ marginTop: 2 }}>
+    <Card sx={{ marginTop: 2 }} className="card-container">
       <CardContent>
         <Typography variant="h6" gutterBottom>
           {t('5DayForecast')}
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className='card-container-center'>
           {dailyForecast.map((day, index) => (
             <Grid item xs={12} sm={2} key={index}>
               <Box className="forecast-card">
                 <Typography variant="subtitle1">{getDayOfWeek(day.date)}</Typography>
                 <Box className="weather-icon">{getWeatherIcon(day.mainWeather)}</Box>
                 <Typography variant="h6">{Math.round(day.avgTemp)}°C</Typography>
+                <Typography variant="body2">
+                  {t('min')}: {Math.round(day.minTemp)}°C
+                </Typography>
+                <Typography variant="body2">
+                  {t('max')}: {Math.round(day.maxTemp)}°C
+                </Typography>
               </Box>
             </Grid>
           ))}
