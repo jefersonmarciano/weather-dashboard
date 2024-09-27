@@ -1,6 +1,10 @@
 import React from 'react';
 import { Card, CardContent, Typography, Grid, Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import WaterDropIcon from '@mui/icons-material/WaterDrop';
+import CompressIcon from '@mui/icons-material/Compress';
+import AirIcon from '@mui/icons-material/Air';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 function WeatherDetails({ data }) {
   const { t } = useTranslation();
@@ -30,19 +34,40 @@ function WeatherDetails({ data }) {
     }
   };
 
-  // Componente para o indicador
+  // Função para selecionar o ícone apropriado
+  const getWeatherIcon = (value, type) => {
+    const color = getIndicatorColor(value, type);
+    const iconStyle = { fontSize: 20, color };
+
+    switch (type) {
+      case 'humidity':
+        return <WaterDropIcon style={iconStyle} />;
+      case 'pressure':
+        return <CompressIcon style={iconStyle} />;
+      case 'wind':
+        return <AirIcon style={iconStyle} />;
+      case 'visibility':
+        return <VisibilityIcon style={iconStyle} />;
+      default:
+        return null;
+    }
+  };
+
+  // Componente para o indicador com ícone
   const Indicator = ({ value, type }) => (
     <Box
       component="span"
       sx={{
-        display: 'inline-block',
-        width: 10,
-        height: 10,
-        borderRadius: '50%',
-        backgroundColor: getIndicatorColor(value, type),
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         marginLeft: 1,
+        width: 24,
+        height: 24,
       }}
-    />
+    >
+      {getWeatherIcon(value, type)}
+    </Box>
   );
 
   return (
@@ -53,21 +78,21 @@ function WeatherDetails({ data }) {
         </Typography>
         <Grid container spacing={2}>
           <Grid item xs={6}>
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
               <strong>{t('Humidade')}:</strong> {data.main.humidity}%
               <Indicator value={data.main.humidity} type="humidity" />
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
               <strong>{t('Pressão')}:</strong> {hPaToAtm(data.main.pressure)} atm
               <Indicator value={hPaToAtm(data.main.pressure)} type="pressure" />
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
               <strong>{t('Vento')}:</strong> {mpsToKmh(data.wind.speed)} km/h
               <Indicator value={mpsToKmh(data.wind.speed)} type="wind" />
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
               <strong>{t('Visibilidade')}:</strong> {mToKm(data.visibility)} km
               <Indicator value={mToKm(data.visibility)} type="visibility" />
             </Typography>
