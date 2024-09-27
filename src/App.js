@@ -13,6 +13,7 @@ import { FavoritesProvider } from './contexts/FavoritesContext';
 import { useTranslation } from 'react-i18next';
 import { Container, Typography, CircularProgress, Alert, Grid, Box } from '@mui/material';
 import './App.css';
+import './GlobalStyles.css';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -161,6 +162,7 @@ function App() {
                   <ForecastCards data={forecastData} />
                 </Grid>
               </Grid>
+              
             )}
             {/* Adicionando o Componente de Favoritos */}
             <Favorites onSelect={fetchWeather} />

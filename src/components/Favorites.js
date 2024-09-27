@@ -10,9 +10,9 @@ function Favorites({ onSelect }) {
   const { favorites, removeFavorite } = useContext(FavoritesContext);
 
   return (
-    <Card sx={{ maxWidth: 400, margin: '20px auto', boxShadow: 3 }}>
+    <Card className="glass-effect">
       <CardContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom color="primary">
           {t('favorites')}
         </Typography>
         {favorites.length === 0 ? (
@@ -34,7 +34,7 @@ function Favorites({ onSelect }) {
                   <ListItemIcon>
                     <LocationOnIcon color="primary" />
                   </ListItemIcon>
-                  <ListItemText primary={city} />
+                  <ListItemText primary={city} primaryTypographyProps={{ style: { color: '#333' } }} />
                 </ListItemButton>
               </ListItem>
             ))}

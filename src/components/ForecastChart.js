@@ -12,13 +12,11 @@ import {
   Legend,
 } from 'chart.js';
 
-// Registrar os componentes do Chart.js
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 function ForecastChart({ data }) {
   const { t } = useTranslation();
 
-  // Processa os dados para o gráfico
   const chartData = {
     labels: data.map((item) => item.dt_txt.split(' ')[0]),
     datasets: [
@@ -49,9 +47,9 @@ function ForecastChart({ data }) {
   };
 
   return (
-    <Card>
+    <Card className="glass-effect">
       <CardContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom color="#333">
           {t('5DayForecast')}
         </Typography>
         <Line data={chartData} options={options} />

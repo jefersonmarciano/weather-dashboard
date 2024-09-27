@@ -5,7 +5,7 @@ import { Card, CardContent, Typography, IconButton, Box } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { WiDaySunny, WiCloudy, WiRain, WiThunderstorm, WiSnow, WiFog } from 'react-icons/wi';
-import './WeatherCard.css'; // Assegure-se de que este arquivo existe para estilos adicionais
+import './WeatherCard.css';
 
 function WeatherCard({ data }) {
   const { t } = useTranslation();
@@ -21,7 +21,6 @@ function WeatherCard({ data }) {
     }
   };
 
-  // Selecionar ícone baseado no clima
   const getWeatherIcon = (weather) => {
     const main = weather.main.toLowerCase();
     switch (main) {
@@ -51,10 +50,10 @@ function WeatherCard({ data }) {
   };
 
   return (
-    <Card>
+    <Card className="glass-effect">
       <CardContent>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="h5" component="div">
+          <Typography variant="h5" component="div" color="#333">
             {data.name}
           </Typography>
           <IconButton

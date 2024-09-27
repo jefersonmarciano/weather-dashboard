@@ -71,7 +71,7 @@ function WeatherDetails({ data }) {
   );
 
   return (
-    <Card sx={{ marginTop: 2 }}>
+    <Card sx={{ marginTop: 2 }} className="glass-effect">
       <CardContent>
         <Typography variant="h6" gutterBottom>
           {t('description')}

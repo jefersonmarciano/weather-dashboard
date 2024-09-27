@@ -55,7 +55,7 @@ function ForecastCards({ data }) {
   }).slice(1, 6); // Obter próximos 5 dias
 
   return (
-    <Card sx={{ marginTop: 2 }} className="card-container">
+    <Card sx={{ marginTop: 2 }} className="glass-effect card-container">
       <CardContent>
         <Typography variant="h6" gutterBottom>
           {t('5DayForecast')}
